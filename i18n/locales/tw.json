@@ -1,0 +1,16 @@
+{
+    "home":"首頁",
+    "guest":"房間",
+    "restaurant":"餐廳",
+    "facility":"設施",
+    "service":"服務",
+    "booking":"預約",
+    "tour":"觀光",
+    "access":"地圖",
+    "company":"公司介紹",
+    "faq":"問與答",
+    "slogan1":"海外旅行極致體驗、",
+    "slogan2":"為您獻上日本的待客之道",
+    "slogan3":"日本的服務精神，與您愉快的探索世界。",
+    "temp":"首頁設計原作者：https://www.instagram.com/teru_design  很多好看的設計，如有需要練習可以用日文連絡原作者要素材。主要是用來練習Nuxt.js的切版、i18n套件、路由控制、slider套件...等。覺得挺好的，想要做完整但沒時間，總之先把路由搞定，以後有空再來慢慢補完各頁面。"
+    }

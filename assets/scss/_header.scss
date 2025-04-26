@@ -1,0 +1,309 @@
+@use './mixin';
+@use './animations' as animations;
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Itim&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yuji+Boku&family=Zen+Kurenaido&display=swap');
+
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &.two {
+        width: 100%;
+        position: fixed;
+    }
+
+    @include mixin.md {
+        justify-content: center;
+    }
+
+
+    .logo2 {
+        min-width: 490px;
+        height: 200px;
+        background-image: url("../img/logo.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        z-index: 90;
+
+        @include mixin.md {
+            min-width: 100%;
+            background-position: center;
+        }
+
+    }
+
+    .logo {
+        min-width: 490px;
+        height: 200px;
+        background-image: url("../img/logo.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        z-index: 90;
+
+        &.type1 {
+            opacity: 0;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        &.type2 {
+            opacity: 0;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+
+
+        @include mixin.md {
+            min-width: 100%;
+            background-position: center;
+        }
+
+
+    }
+
+    .menu {
+        width: 500px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        gap: 1rem;
+
+        @include mixin.md {
+            display: none;
+        }
+
+        .menu-top,
+        .menu-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-top {
+            width: 100%;
+
+            .lang-btn {
+                font-weight: 100;
+                cursor: pointer;
+                font-size: 0.8rem;
+                color: rgb(235, 245, 151);
+                z-index: 99;
+            }
+
+            .lang-btn:hover {
+                text-decoration: underline;
+            }
+
+            .booking-btn {
+                cursor: pointer;
+                border: 1px solid mixin.$base;
+                padding: 0.4rem 1rem;
+                border-radius: 35px;
+                z-index: 99;
+                font-family: "Yuji Boku", serif;
+                text-decoration: none;
+                color: mixin.$base;
+            }
+
+            .booking-btn:hover {
+                background-color: mixin.$base;
+                color: rgb(34, 34, 34);
+            }
+
+        }
+
+        .menu-bottom {
+            width: 100%;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+    }
+
+    .btn {
+        cursor: pointer;
+        z-index: 99;
+        font-family: "Yuji Boku", serif;
+        text-decoration: none;
+        color: mixin.$base;
+
+        &:visited {
+            cursor: pointer;
+            z-index: 99;
+            font-family: "Yuji Boku", serif;
+            text-decoration: none;
+
+        }
+
+
+    }
+
+    .btn:hover {
+        color: rgb(245, 218, 67);
+    }
+
+
+    .mobile-toggle {
+        position: fixed;
+        right: 2rem;
+        top: 2rem;
+        z-index: 99;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid mixin.$base;
+        border-radius: 50%;
+        background-color: mixin.$base;
+        opacity: 0.5;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+        display: none;
+
+
+        @include mixin.md {
+            display: flex;
+        }
+
+
+
+        span {
+            width: 1.8rem;
+            background-color: #1f1f1f;
+            height: 1px;
+            margin-top: 1.2rem;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+
+            &::before {
+                content: "";
+                width: 1.8rem;
+                background-color: #1f1f1f;
+                height: 1px;
+                top: 0.5rem;
+                position: absolute;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &::after {
+                content: "";
+                width: 1.8rem;
+                background-color: #1f1f1f;
+                height: 1px;
+                bottom: 0.5rem;
+                position: absolute;
+                transition: all 0.5s ease-in-out;
+            }
+
+
+            &.active {
+                width: 1.8rem;
+                transform: translateX(50px);
+                background-color: transparent;
+            }
+
+
+
+            &.active::before {
+                content: "";
+                width: 1.8rem;
+                background-color: #1f1f1f;
+                height: 1px;
+                top: 0rem;
+                position: absolute;
+                transform: translateX(-50px) rotate(-45deg);
+            }
+
+            &.active::after {
+                content: "";
+                width: 1.8rem;
+                background-color: #1f1f1f;
+                height: 1px;
+                bottom: 0rem;
+                position: absolute;
+                transform: translateX(-50px) rotate(45deg);
+            }
+        }
+    }
+}
+
+.mobile-menu {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    bottom: 0;
+    background-image: linear-gradient(0deg, rgba(207, 207, 207, 1) 0%, rgba(207, 207, 207, 1) 40%,
+            rgba(207, 207, 207, 0) 100%);
+    z-index: 9999999;
+    transition: all 1s ease-in-out;
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    color: #1f1f1f;
+    cursor: pointer;
+    padding-top: 10px;
+    font-family: "Yuji Boku", serif;
+    padding-top:60px;
+
+    &.open {
+        display: flex;
+        transform: translateY(0%);
+    }
+
+
+    .lang-wrap {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+
+
+    .mobile-btn {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        text-decoration: none;
+        color: black;
+        text-shadow:  mixin.$base;
+
+        &.booking {
+            font-size: larger;
+        }
+
+        &.booking::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #333333;
+            bottom: 0px;
+        }
+    }
+
+
+
+    .mobile-btn:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+
+}

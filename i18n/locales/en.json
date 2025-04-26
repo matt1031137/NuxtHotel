@@ -1,0 +1,17 @@
+{
+    "home": "Home",
+    "guest": "Stay",
+    "restaurant": "Eat",
+    "facility": "Space",
+    "service": "Care",
+    "booking": "Book",
+    "tour": "Tour",
+    "access": "Map",
+    "company": "About",
+    "faq": "Help",
+    "slogan1": "Luxury abroad,",
+    "slogan2": "With a Japanese heart.",
+    "slogan3": "Explore the world with omotenashi.",
+    "temp":"Original homepage design by: https://www.instagram.com/teru_design. There are many beautiful designs, and if needed, you can contact the original creator in Japanese to request materials. This project is mainly for practicing Nuxt.js layout building, i18n integration, routing control, slider plugins, etc. I think it's really great and I want to complete it fully, but I don't have enough time. For now, I'll focus on setting up the routes first, and slowly complete the other pages when I have time."
+  }
+  

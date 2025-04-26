@@ -1,0 +1,22 @@
+$base: #F7F7E3;
+
+
+@mixin xxl {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 1010px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+

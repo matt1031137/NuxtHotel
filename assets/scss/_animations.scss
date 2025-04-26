@@ -1,0 +1,45 @@
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slowMove {
+    0% {
+        transform: scale(1) translateX(0%);
+    }
+
+    50% {
+        transform: scale(1.2) translateX(-5%);
+    }
+
+    100% {
+        transform: scale(1) translateX(0%);
+    }
+}
+
+@keyframes fadeThenMove {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    10% {
+      opacity: 1;
+    }
+    25% {
+        transform: scale(1) translateX(0%);
+    }
+
+    50%{
+        transform: scale(1.2) translateX(-5%);
+    }
+
+    100% {
+        transform: scale(1) translateX(0%);
+    }
+  }
+  

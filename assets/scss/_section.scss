@@ -1,0 +1,22 @@
+@use './mixin';
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(39, 39, 39);
+    // background-image: url('../img/bg2.png');
+    padding-top: 200px;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    line-height: 1.5rem;
+
+    @include mixin.md {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+}
