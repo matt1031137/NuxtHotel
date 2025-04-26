@@ -9,7 +9,7 @@ useHead({
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
   meta: [
-    { name: 'description', content: '這裡是 Nuxt 3 學習筆記 實戰部落格' }
+    { name: 'description', content: '只是練習Nuxt.js的網站 By Matt' }
   ],
 })
 
