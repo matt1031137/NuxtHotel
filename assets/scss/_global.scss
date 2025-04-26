@@ -115,7 +115,7 @@ body {
             object-fit: cover;
             animation: fade 1.5s ease-in-out;
             // animation: slowMove 60s linear 1.5s infinite;
-           
+
 
         }
 
@@ -142,8 +142,8 @@ body {
             animation-delay: 1s;
             animation-fill-mode: forwards;
 
-    
-    
+
+
         }
 
         @include mixin.md {
@@ -166,7 +166,7 @@ body {
             animation-delay: 2s;
             animation-fill-mode: forwards;
 
-   
+
         }
 
         @include mixin.md {
@@ -174,5 +174,30 @@ body {
         }
 
     }
+
+    .loadingWrap {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #d4caca;
+
+        .loadingBar {
+            width: 256px;
+            height: 8px;
+            background-color: rgb(70, 50, 50);
+            margin-top: 16px;
+
+            .progress {
+                height: 8px;
+                background-color: rgb(70, 50, 50);
+            }
+        }
+
+
+    }
+
 
 }
