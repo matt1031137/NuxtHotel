@@ -2,7 +2,7 @@
 
 
     <div v-if="loading" class="loadingWrap">
-        <img src="/assets/img/logo.png" alt="logo" class="" />
+        <img src="/assets/img/logo.png" alt="loadingLogo" class="" />
         <div class="loadingBar">
             <div class="progress" :style="{ width: progress + '%' }"></div>
         </div>
@@ -78,15 +78,11 @@ const preloading = () => {
     // 模擬進度條自己跑
     timer = setInterval(() => {
         const elapsed = Date.now() - startTime
-        progress.value = Math.min(100, (elapsed / 4000) * 100) // 5秒到100%
-        if (progress.value >= 100 && preloadDone.value) {
+        progress.value = Math.min(100, (elapsed / 3000) * 100); // 5秒到100%
+        if (progress.value >= 25 && preloadDone.value) {
       clearInterval(timer)
       loading.value = false
-    };
-     
-    
-    
-    }, 100)
+    }}, 100)
 
 
     // 實際預載圖片

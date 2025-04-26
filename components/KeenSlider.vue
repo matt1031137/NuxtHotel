@@ -1,8 +1,14 @@
 <template>
     <div ref="container" class="keen-slider">
-        <div class="keen-slider__slide number-slide1"></div>
-        <div class="keen-slider__slide number-slide2"></div>
-        <div class="keen-slider__slide number-slide3"></div>
+        <div class="keen-slider__slide number-slide1">
+       
+        </div>
+        <div class="keen-slider__slide number-slide2">
+        
+        </div>
+        <div class="keen-slider__slide number-slide3">
+         
+        </div>
     </div>
 </template>
 
@@ -68,15 +74,16 @@ body {
 .number-slide1 {
     width: 100%;
     height: 100vh;
-    background-image: url('/assets/img/1.png');
+    background-image: url('/img/1.png');
     background-position: center;
     background-size: cover;
     filter: brightness(50%);
+    
 }
 .number-slide2 {
     width: 100%;
     height: 100vh;
-    background-image: url('/assets/img/2.png');
+    background-image: url('/img/2.png');
     background-position: center;
     background-size: cover;
     filter: brightness(50%);
@@ -85,7 +92,7 @@ body {
 .number-slide3 {
     width: 100%;
     height: 100vh;
-    background-image: url('/assets/img/3.png');
+    background-image: url('/img/3.png');
     background-position: center;
     background-size: cover;
     filter: brightness(50%);
