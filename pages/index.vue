@@ -69,7 +69,7 @@ const checkSize = () => {
 
 const loading = ref(true)
 const progress = ref(0)
-
+const preloadDone = ref(false)
 
 const preloading = () => {
     let timer
@@ -78,8 +78,16 @@ const preloading = () => {
     // 模擬進度條自己跑
     timer = setInterval(() => {
         const elapsed = Date.now() - startTime
-        progress.value = Math.min(100, (elapsed / 5000) * 100) // 5秒到100%
+        progress.value = Math.min(100, (elapsed / 4000) * 100) // 5秒到100%
+        if (progress.value >= 100 && preloadDone.value) {
+      clearInterval(timer)
+      loading.value = false
+    };
+     
+    
+    
     }, 100)
+
 
     // 實際預載圖片
     const images = [
@@ -99,10 +107,9 @@ const preloading = () => {
 
     Promise.race([
         Promise.all(preloadImages),
-        new Promise(resolve => setTimeout(resolve, 5000)) // 最多5秒
+        new Promise(resolve => setTimeout(resolve, 4000)) // 最多5秒
     ]).then(() => {
-        clearInterval(timer)
-        loading.value = false
+        preloadDone.value = true
     })
 }
 

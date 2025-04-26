@@ -184,14 +184,22 @@ body {
         justify-content: center;
         background-color: #d4caca;
 
+        & img {
+            @include mixin.md {
+                width: 50%;
+            }
+        }
+
         .loadingBar {
             width: 256px;
             height: 8px;
-            background-color: rgb(70, 50, 50);
             margin-top: 16px;
+            border-radius: 30px;
+            border: 1px solid rgb(70, 50, 50);
+            ;
 
             .progress {
-                height: 8px;
+                height: 7px;
                 background-color: rgb(70, 50, 50);
             }
         }
